@@ -1,19 +1,11 @@
 {
-    "bindings": [
-      {
-        "authLevel": "anonymous",
-        "type": "httpTrigger",
-        "direction": "in",
-        "name": "req",
-        "methods": [
-          "post"
-        ]
-      },
-      {
-        "type": "http",
-        "direction": "out",
-        "name": "res"
-      }
-    ],
-    "disabled": false
-  }
+  "bindings": [
+    {
+      "type": "eventGridTrigger",
+      "name": "event",
+      "direction": "in"
+    }
+  ],
+  "disabled": false,
+  "scriptFile": "__init__.py"
+}
