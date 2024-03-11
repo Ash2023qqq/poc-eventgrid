@@ -10,7 +10,7 @@ def orchestrator_function(context: DurableOrchestrationContext):
     print(f"workflow_orchestrator invoked, received event_data: {event_data}")
     model_requested = event_data["model"]
     if model_requested == "consumer":
-        result = yield context.call_activity("consumer", event_data)
+        result = yield context.call_activity("consumer", model_requested)
     #elif model_requested == "aiaas_sda_vitals":
     #    result = yield context.call_activity("aiaas_sda_vitals", event_data)
     else :
