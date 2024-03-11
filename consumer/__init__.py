@@ -20,6 +20,7 @@ def main(event: func.EventGridEvent):
 
     result = json.dumps({
         'id': event.id,
+        'model': event.model,
         'data': event.get_json(),
         'topic': event.topic,
         'subject': event.subject,
