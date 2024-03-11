@@ -5,7 +5,7 @@ from typing import List
 import azure.durable_functions as df
 
 
-async def main(events: List[EventGridEvent], starter: str):
+async def main(events: func.EventGridEvent], starter: str):
     client = df.DurableOrchestrationClient(starter)
     for event in events:
         logging.info('Python Eventgrid trigger processed an event: %s',
