@@ -4,6 +4,13 @@
       "type": "activityTrigger",
       "name": "event",
       "direction": "in"
+    },
+    {
+      "type": "eventGrid",
+      "name": "$return",
+      "topicEndpointUri": "EVENTGRID_TOPIC_ENDPOINT",
+      "topicKeySetting": "EVENTGRID_TOPIC_KEY",
+      "direction": "out"
     }
   ],
   "scriptFile": "__init__.py"
