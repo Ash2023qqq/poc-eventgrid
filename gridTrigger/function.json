@@ -2,7 +2,7 @@
   "bindings": [
     {
       "type": "eventGridTrigger",
-      "name": "event",
+      "name": "events",
       "direction": "in"
     },
     {
