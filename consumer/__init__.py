@@ -10,7 +10,7 @@ def main(event: str):
         'data': event,
         'topic': "event.topic",
         'subject': "event.subject",
-        'eventType': "event.eventtype",
+        'eventtype': "event.eventtype",
     })
 
     logging.info('Python EventGrid trigger processed an event: %s', result)
