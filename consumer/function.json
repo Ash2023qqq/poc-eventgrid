@@ -8,8 +8,8 @@
     {
       "type": "eventGrid",
       "name": "$return",
-      "topicEndpointUri": "EVENTGRID_TOPIC_ENDPOINT",
-      "topicKeySetting": "EVENTGRID_TOPIC_KEY",
+      "topicEndpointUri": "EventGridTopicEndpoint",
+      "topicKeySetting": "EventGridTopicKey",
       "direction": "out"
     }
   ],
