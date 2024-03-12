@@ -7,7 +7,7 @@
     },
     {
       "type": "eventGrid",
-      "name": "$return",
+      "name": "outputEvent",
       "topicEndpointUri": "EventGridTopicEndpoint",
       "topicKeySetting": "EventGridTopicKey",
       "direction": "out"
