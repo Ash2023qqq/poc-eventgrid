@@ -4,7 +4,8 @@ import datetime
 import azure.functions as func
 
 def main(event: str, outputEvent: func.Out[func.EventGridOutputEvent]):
-    logging.log("eventGridEvent: ", event)
+    #logging.log("eventGridEvent: ", event)
+    logging.info('Python EventGrid trigger received an incoming event: %s', event)
     # result = json.dumps({
     #     'id': "event.id",
     #     'data': event,
