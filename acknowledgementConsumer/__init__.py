@@ -13,4 +13,4 @@ def main(event: func.EventGridEvent):
     })
     print(result)
     logging.info('Python EventGrid trigger : The acknowledgment from the ack topic is processed: %s', event)
-    return result
+    #return result
