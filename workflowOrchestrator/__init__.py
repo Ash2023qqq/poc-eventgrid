@@ -9,8 +9,9 @@ def orchestrator_function(context: DurableOrchestrationContext):
     logging.info(f"workflow_orchestrator invoked, received event_data: {event_data}")
     print(f"workflow_orchestrator invoked, received event_data: {event_data}")
     model_requested = event_data["model"]
+    event_data_send = json.dumps(event_data)
     if model_requested == "consumer":
-        result = yield context.call_activity("consumer", model_requested)
+        result = yield context.call_activity("consumer", event_data_send)
     #elif model_requested == "aiaas_sda_vitals":
     #    result = yield context.call_activity("aiaas_sda_vitals", event_data)
     else :
