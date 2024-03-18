@@ -14,12 +14,13 @@ def main(event: str, outputEvent: func.Out[func.EventGridOutputEvent]):
     #     'eventtype': "event.eventtype",
     # })
     result = json.loads(event)
+    print(result)
     outputEvent.set(
         func.EventGridOutputEvent(
-            id=result.pop('id'),
-            data=result.pop('data'),
-            subject=result.pop('subject'),
-            event_type=result.pop('eventType'),
+            id=result.__getitem__('id'),
+            data=result.__getitem__('data'),
+            subject=result.__getitem__('subject'),
+            event_type=result.__getitem__('eventType'),
             event_time=datetime.datetime.utcnow(),
             data_version="1.0"))
     logging.info('Python EventGrid trigger processed an event: %s', event)
